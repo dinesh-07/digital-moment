@@ -14,10 +14,11 @@ const auth = require('./routes/auth');
 const app = express();
 
 try {
-  connect()
-}catch(error) {
-  console.log("Error connecting to the database")
+  connect();
+} catch (error) {
+  console.log('Error connecting to the database');
 }
+
 // body parser
 app.use(bodyParser.json());
 
