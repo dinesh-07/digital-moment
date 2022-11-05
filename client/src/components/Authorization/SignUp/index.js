@@ -16,7 +16,6 @@ const Signup = ({setModal}) => {
       <Form.Group className="mb-3" controlId="">
         <Form.Label>First Name</Form.Label>
         <Form.Control type="email" placeholder="Enter your first name!"/>
-
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="">
@@ -28,7 +27,6 @@ const Signup = ({setModal}) => {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Confirm your Password!</Form.Label>
         <Form.Control type="password" placeholder="Please enter your password " />
