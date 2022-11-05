@@ -24,7 +24,7 @@ const Authorization = ({ show, setShow, openLogin, setOpenLogin }) => {
           </Nav>
         </Modal.Header>
         <Modal.Body>
-          { openLogin ? <Login /> : <Signup setModal={setShow} /> }
+          { openLogin ? <Login setModal={setShow} /> : <Signup setModal={setShow} /> }
         </Modal.Body>
       </Modal>
   )
