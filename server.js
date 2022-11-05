@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const { connect } = require('./helper/connection')
+const { connect, disconnect } = require('./helper/connection')
 
 // routes.
 const items = require('./routes/api/items');
