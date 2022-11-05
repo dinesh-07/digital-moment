@@ -11,7 +11,6 @@ const app = express();
 
 try {
   connect()
-  console.log("Connection done")
 }catch(error) {
   console.log("Error connecting to the database")
 }
