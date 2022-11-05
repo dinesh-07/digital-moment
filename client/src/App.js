@@ -1,4 +1,6 @@
-import Navigation from './components/Layout/Navigation'
+import Navigation from './components/Layout/Navigation';
+import Preview from './components/Preview';
+import './App.css';
 
 function App() {
 
@@ -6,6 +8,7 @@ function App() {
   return (
     <div>
       <Navigation />
+      <Preview />
     </div>
   );
 }
