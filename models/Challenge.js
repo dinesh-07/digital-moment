@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const challengeSchema = mongoose.Schema({
-    id: { type: String, required: true, default: uuidv4()}, 
+    
     thumnail: {type: String, required: false},
     name: { type: String, required: true},
     description: {type: String, required: true},
@@ -10,7 +10,8 @@ const challengeSchema = mongoose.Schema({
     city: {type: String}, 
     country: {type: String},
     relatedChallenges: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Challenge'} ],
-    relatedIdeas: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Idea'} ]
+    relatedIdeas: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Idea'} ],
+    tag: [{type: String}]
 })
 
 const Challenge = mongoose.model("Challenge", challengeSchema)
