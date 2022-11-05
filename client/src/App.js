@@ -3,7 +3,7 @@ import Preview from './components/Preview';
 import './App.css';
 import React from 'react'
 import i18n from './i18n';
-import { Footer } from 'react-bootstrap/lib/Modal';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
