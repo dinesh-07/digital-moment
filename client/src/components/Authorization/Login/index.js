@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-const Login = ({setModal}) => {
+const Login = ({ setModal }) => {
   return (
     <Form>
       <Form.Group className="mb-3"
@@ -11,10 +11,10 @@ const Login = ({setModal}) => {
         <Form.Control type="email" placeholder="Enter email" />
       </Form.Group>
 
-      <Form.Group className="mb-3" 
-      controlId="userPassword"> 
+      <Form.Group className="mb-3"
+      controlId="userPassword">
       <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" /> 
+      <Form.Control type="password" placeholder="Password" />
       </Form.Group>
 
       <div className='w.100 justify-content-center'>
@@ -30,7 +30,7 @@ const Login = ({setModal}) => {
 
     </Form>
 
-    
+
   )
 }
 

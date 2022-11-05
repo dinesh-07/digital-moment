@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-const Signup = ({setModal}) => {
+const Signup = ({ setModal }) => {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">

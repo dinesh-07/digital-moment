@@ -17,7 +17,7 @@ function Navigation() {
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='flex'>
         <Container>
           <Navbar.Brand href="#home">
-              <img src ="https://digitalmoment.org/img/logo-DM-dark.png" className='logo'/>
+              <img alt='logo' src ="https://digitalmoment.org/img/logo-DM-dark.png" className='logo'/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
