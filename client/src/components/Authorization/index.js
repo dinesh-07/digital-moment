@@ -5,6 +5,7 @@ import './style.scss';
 import Nav from 'react-bootstrap/Nav';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const Authorization = ({ show, setShow, openLogin, setOpenLogin }) => {
   return (
@@ -23,17 +24,8 @@ const Authorization = ({ show, setShow, openLogin, setOpenLogin }) => {
           </Nav>
         </Modal.Header>
         <Modal.Body>
-          { openLogin ? <Login /> : <Signup /> }
+          { openLogin ? <Login /> : <Signup setModal={setShow} /> }
         </Modal.Body>
-        <Modal.Footer className='border-0'>
-          <Button
-            variant="primary"
-            onClick={() => setShow(false)}
-            className='w-50 m-auto rounded-0 auth-submit'
-          >
-            Submit
-          </Button>
-        </Modal.Footer>
       </Modal>
   )
 }
