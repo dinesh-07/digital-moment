@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const ideasSchema = mongoose.Schema({
-    id: { type: String, required: true, default: uuidv4()}, 
     thumnail: {type: String, required: false},
     name: { type: String, required: true},
     description: {type: String, required: true},

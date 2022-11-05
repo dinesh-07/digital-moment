@@ -2,10 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const {connect} = require('./helper/connection')
-const students = require('./routes/api/student')
+const {connect} = require('./helper/connection');
+// routes.
+const items = require('./routes/api/items');
+const students = require('./routes/api/student');
+const users = require('./routes/api/user');
+const challenges = require('./routes/api/challenge');
 const auth = require('./routes/auth');
-const api = require('./routes/api/items');
+
 
 const app = express();
 
@@ -19,9 +23,11 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 8000;
 
+app.use('/api/items', items);
+app.use('/api/students', students); // need to remove this
+app.use('/api/users', users);
+app.use('/api/challenge', challenges);
 app.use('/api/auth/', auth);
-app.use('/api/items', api);
-app.use('/api/students', students)
 
 // disconnect from database when server disconnects
 process.on('SIGINT', () => {
