@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const challengeSchema = mongoose.Schema({
+const ideasSchema = mongoose.Schema({
     id: { type: String, required: true, default: uuidv4()}, 
     thumnail: {type: String, required: false},
     name: { type: String, required: true},
@@ -13,5 +13,5 @@ const challengeSchema = mongoose.Schema({
     relatedIdeas: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Idea'} ]
 })
 
-const Challenge = mongoose.model("Challenge", challengeSchema)
-module.exports = Challenge
+const Idea = mongoose.model("Idea", ideasSchema)
+module.exports = Idea
