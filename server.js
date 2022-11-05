@@ -2,14 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const {connect} = require('./helper/connection');
+const { connect } = require('./helper/connection');
+
 // routes.
 const items = require('./routes/api/items');
 const students = require('./routes/api/student');
 const users = require('./routes/api/user');
 const challenges = require('./routes/api/challenge');
 const auth = require('./routes/auth');
-
 
 const app = express();
 

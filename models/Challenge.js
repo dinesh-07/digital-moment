@@ -18,7 +18,7 @@ const challengeSchema = mongoose.Schema({
 =======
 >>>>>>> dad2532 (modified idea schema)
 const challengeSchema = mongoose.Schema({
-    id: { type: String, required: true, default: uuidv4()}, 
+    
     thumnail: {type: String, required: false},
     name: { type: String, required: true},
     description: {type: String, required: true},
@@ -31,8 +31,13 @@ const challengeSchema = mongoose.Schema({
 >>>>>>> e454c22 (challenges schema modified)
 =======
     relatedChallenges: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Challenge'} ],
+<<<<<<< HEAD
     relatedIdeas: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Idea'} ]
 >>>>>>> dad2532 (modified idea schema)
+=======
+    relatedIdeas: [ {type: mongoose.Schema.Types.ObjectId, ref: 'Idea'} ],
+    tag: [{type: String}]
+>>>>>>> 8367092 (changes)
 })
 
 const Challenge = mongoose.model("Challenge", challengeSchema)
