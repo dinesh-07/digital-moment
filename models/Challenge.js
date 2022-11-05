@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const challengeSchema = mongoose.Schema({
-    
     thumnail: {type: String, required: false},
     name: { type: String, required: true},
     description: {type: String, required: true},
