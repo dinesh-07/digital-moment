@@ -9,6 +9,7 @@ function App() {
     <div>
       <Preview />
       <Navigation />
+      <Preview />
     </div>
   );
 }
