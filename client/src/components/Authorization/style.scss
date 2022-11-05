@@ -10,11 +10,11 @@
     }
 }
 
-.auth-submit, .auth-submit:hover, .auth-submit:active {
+.auth-submit {
     background-color: rgb(238, 181, 80);
     border-color: rgb(238, 181, 80);
 
-    &:hover, &:active {
+    &:hover, &:active:active {
         background-color: rgb(241, 199, 127);
         border-color: rgb(241, 199, 127);
     }
