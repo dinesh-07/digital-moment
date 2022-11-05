@@ -4,8 +4,6 @@ import Signup from './SignUp';
 import './style.scss';
 import Nav from 'react-bootstrap/Nav';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 
 const Authorization = ({ show, setShow, openLogin, setOpenLogin }) => {
   return (
