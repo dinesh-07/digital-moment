@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors')
+const cors = require('cors');
 
 const { connect, disconnect } = require('./helper/connection');
 
@@ -18,19 +18,17 @@ try {
   connect();
 } catch (error) {
   console.log('Error connecting to the database');
-  process.exit(1);
 }
 // body parser
 app.use(bodyParser.json());
-app.use(loggerMiddleware)
-app.use(cors())
+app.use(loggerMiddleware);
+app.use(cors());
 
 const PORT = process.env.PORT || 8000;
 
 app.use('/api/users/', users);
 app.use('/api/challenges/', challenges);
 app.use('/api/auth', auth);
-
 
 // disconnect from database when server disconnects
 process.on('SIGINT', () => {
