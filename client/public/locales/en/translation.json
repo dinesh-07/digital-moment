@@ -1,14 +1,22 @@
 {
   "lang": "FR",
+  "greeting": "Hi",
   "nav": {
     "auth": {
       "login": "Login",
+      "logout": "Logout",
       "signup": "Sign Up",
       "email": "Email address",
       "password": "Password",
       "passwordConfirm": "Confirm your password",
       "name": "Your name",
-      "submit": "Submit"
+      "submit": "Submit",
+      "invalidEmail": "Please enter a proper email address",
+      "invalidPassword": "Please enter a password",
+      "invalidLogin": "Your login details are incorrect",
+      "invalidName": "Please enter a proper name",
+      "invalidSignup": "There is already an account with this email",
+      "invalidConfirmPassword": "Your passwords do not match"
     }
   }
 }

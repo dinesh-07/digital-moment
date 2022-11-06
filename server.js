@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use('/api/users/', users);
 app.use('/api/challenges/', challenges);
-app.use('/api/auth/', auth);
+app.use('/api/auth', auth);
 
 
 // disconnect from database when server disconnects

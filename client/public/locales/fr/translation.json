@@ -1,14 +1,22 @@
 {
   "lang": "EN",
+  "greeting": "Bonjour",
   "nav": {
     "auth": {
-      "login": "Accédez",
-      "signup": "Signer",
-      "email": "Courriel",
+      "login": "Me connecter",
+      "signup": "Enregistrer",
+      "logout": "Se déconnecter",
+      "email": "Adresse courriel",
       "password": "Mot de passe",
       "passwordConfirm": "Confirmer le mot de passe",
       "name": "Votre nom",
-      "submit": "Soumettre"
+      "submit": "Soumettre",
+      "invalidEmail": "FR Please enter a proper email address",
+      "invalidPassword": "FR Please enter a password",
+      "invalidLogin": "FR You login details are incorrect",
+      "invalidName": "FR Please enter a proper name",
+      "invalidSignup": "FR There is already an account with this email",
+      "invalidConfirmPassword": "FR Your passwords do not match"
     }
   }
 }
