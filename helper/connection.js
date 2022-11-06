@@ -11,6 +11,7 @@ function connect() {
 	const dbUrl = process.env.DB_URI
 	return mongoose.connect(dbUrl, config)
 }
+
 function disconnect() {
     return mongoose.connection.close()
 } 

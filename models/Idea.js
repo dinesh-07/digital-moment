@@ -1,13 +1,6 @@
 const mongoose = require('mongoose')
 
 const ideasSchema = mongoose.Schema({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    id: { type: String, required: true, default: uuidv4()}, 
->>>>>>> dad2532 (modified idea schema)
-=======
->>>>>>> 8367092 (changes)
     thumnail: {type: String, required: false},
     name: { type: String, required: true},
     description: {type: String, required: true},

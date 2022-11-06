@@ -1,7 +1,6 @@
 
-const mongoose = require('mongoose');
-const validator = require('validator');
-const bcrypt = require('bcrypt');
+const mongoose = require('mongoose')
+const validator = require('validator')
 
 const userSchema = new mongoose.Schema({
 	name: { type: String, required: true },
@@ -11,13 +10,6 @@ const userSchema = new mongoose.Schema({
 	createdAt: { type: Date, default: Date.now()},
 })
 
-userSchema.pre('save', async function(next) {
-	const unencryptedPassword = this.password
-	const saltRound = 10
-	const encryptedPassword = await bcrypt.hash(unencryptedPassword, saltRound)
-	this.password = encryptedPassword
-	next()
-})
-
 const User = mongoose.model('User', userSchema)
+
 module.exports = User
