@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@emotion/cache": "^11.10.5",
->>>>>>> 0bf65143bd26f20fcc9f23aa8f4150b9e0ef88eb
     "@emotion/react": "^11.10.5",
     "@emotion/style": "^0.8.0",
     "@emotion/styled": "^11.10.5",
@@ -17,14 +14,10 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
-<<<<<<< HEAD
-    "markdown-to-jsx": "^7.1.7",
-=======
     "i18next": "^22.0.4",
     "i18next-http-backend": "^2.0.1",
     "markdown-to-jsx": "^7.1.7",
     "multiselect-react-dropdown": "^2.0.25",
->>>>>>> 0bf65143bd26f20fcc9f23aa8f4150b9e0ef88eb
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
