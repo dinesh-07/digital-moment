@@ -4,8 +4,11 @@ import Signup from './SignUp';
 import './style.scss';
 import Nav from 'react-bootstrap/Nav';
 import Modal from 'react-bootstrap/Modal';
+import { useTranslation } from 'react-i18next';
 
 const Authorization = ({ show, setShow, openLogin, setOpenLogin }) => {
+  const { t } = useTranslation();
+
   return (
     <Modal show={show} onHide={() => setShow(false)} centered contentClassName='rounded-0'>
         <Modal.Header className='justify-content-center border-0'>
@@ -14,10 +17,10 @@ const Authorization = ({ show, setShow, openLogin, setOpenLogin }) => {
           onSelect={key => setOpenLogin(key === 'login')}
           >
             <Nav.Item>
-              <Nav.Link eventKey='login'>Login</Nav.Link>
+              <Nav.Link eventKey='login'>{t("nav.auth.login")}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+              <Nav.Link eventKey='signup'>{t("nav.auth.signup")}</Nav.Link>
             </Nav.Item>
           </Nav>
         </Modal.Header>

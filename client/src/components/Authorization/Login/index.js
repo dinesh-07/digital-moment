@@ -15,8 +15,8 @@ const Login = ({ setModal }) => {
           <Form.Control type="email" placeholder="john@example.com" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="userPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>{t("nav.auth.password")}</Form.Label>
+          <Form.Control type="password" placeholder={t("nav.auth.password")} />
         </Form.Group>
       </div>
       <Button
@@ -24,7 +24,7 @@ const Login = ({ setModal }) => {
         onClick={() => setModal(false)}
         className='w-50 rounded-0 auth-submit mt-3'
       >
-        Submit
+        {t("nav.auth.submit")}
       </Button>
     </Form>
   )

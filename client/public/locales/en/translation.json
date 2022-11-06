@@ -1,7 +1,14 @@
 {
-    "nav.auth.email": "Waofihao",
-    "description": {
-      "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-      "part2": "Switch language between english and german using buttons above."
+  "lang": "FR",
+  "nav": {
+    "auth": {
+      "login": "Login",
+      "signup": "Sign Up",
+      "email": "Email address",
+      "password": "Password",
+      "passwordConfirm": "Confirm your password",
+      "name": "Your name",
+      "submit": "Submit"
     }
   }
+}
