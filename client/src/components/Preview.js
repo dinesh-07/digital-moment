@@ -3,9 +3,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useState, useEffect} from 'react';
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturePost';
 import FeaturedPost from './FuturedPost';
+import { postDownloader } from './Services/postDownloader';
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
@@ -16,28 +18,19 @@ const mainFeaturedPost = {
   linkText: 'Continue reading…',
 };
 
-const featuredPosts = [
-  {
-    title: 'Featured post',
-    date: 'Nov 12',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
-    imageLabel: 'Image Text',
-  },
-  {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
-    imageLabel: 'Image Text',
-  },
-];
 
 const theme = createTheme();
 
 export default function Preview() {
+
+  const [posts, setPost] = useState()
+
+  useEffect(() => {
+    postDownloader().then((items) => {
+      setPost(items)
+    })
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -46,15 +39,8 @@ export default function Preview() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
-
-          <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
+          {posts !== undefined && posts.map((post) => (
+              <FeaturedPost key={post.name} post={post} />
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
