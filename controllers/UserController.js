@@ -13,4 +13,5 @@ async function getUserById(id) {
     return await User.find({_id: id})
 }
 
-module.exports = { saveUser, getAllUsers, getUserById };
+// further customise as per the needs.
+module.exports = {saveUser, getAllUsers, getUserById}
