@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@emotion/cache": "^11.10.5",
+>>>>>>> 0bf65143bd26f20fcc9f23aa8f4150b9e0ef88eb
     "@emotion/react": "^11.10.5",
     "@emotion/style": "^0.8.0",
     "@emotion/styled": "^11.10.5",
@@ -11,18 +15,29 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
+<<<<<<< HEAD
     "markdown-to-jsx": "^7.1.7",
+=======
+    "i18next": "^22.0.4",
+    "i18next-http-backend": "^2.0.1",
+    "markdown-to-jsx": "^7.1.7",
+    "multiselect-react-dropdown": "^2.0.25",
+>>>>>>> 0bf65143bd26f20fcc9f23aa8f4150b9e0ef88eb
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.0.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.56.0",
+    "validator": "^13.7.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +59,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:8000",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

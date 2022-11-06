@@ -1,13 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
-const { connect } = require('./helper/connection');
-// routes.
-const items = require('./routes/api/items');
-const students = require('./routes/api/student');
-const users = require('./routes/api/user');
-const challenges = require('./routes/api/challenge');
+const { connect, disconnect } = require('./helper/connection');
+
+const users = require('./routes/users');
+const challenges = require('./routes/challenges');
+const auth = require('./routes/auth');
+
+const errorHandlerMiddleware = require('./middleware/error-handler.middleware');
+const loggerMiddleware = require('./middleware/logger.middleware');
 
 const app = express();
 
@@ -18,13 +21,14 @@ try {
 }
 // body parser
 app.use(bodyParser.json());
+app.use(loggerMiddleware);
+app.use(cors());
 
-app.use('/api/users', users);
-app.use('/api/challenge', challenges);
 const PORT = process.env.PORT || 8000;
 
-app.use('/api/auth/', auth);
-app.use('/api/items', api);
+app.use('/api/users/', users);
+app.use('/api/challenges/', challenges);
+app.use('/api/auth', auth);
 
 // disconnect from database when server disconnects
 process.on('SIGINT', () => {
@@ -35,3 +39,5 @@ process.on('SIGINT', () => {
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
+
+app.use(errorHandlerMiddleware);

@@ -1,0 +1,16 @@
+.nav-auth, .nav-auth:hover, .nav-auth:active:active {
+    background-color: white;
+    color: rgb(81, 83, 100) !important;
+    border-color: rgb(81, 83, 100);
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+  }
+
+  @media (max-width: 400px) {
+    .logo {
+        width: 100px;
+    }
+  }

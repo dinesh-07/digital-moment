@@ -1,0 +1,22 @@
+{
+  "lang": "EN",
+  "greeting": "Bonjour",
+  "nav": {
+    "auth": {
+      "login": "Connectez-Vous",
+      "signup": "Enregistrez-Vous",
+      "logout": "Déconnectez-Vous",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "passwordConfirm": "Confirmer le mot de passe",
+      "name": "Nom",
+      "submit": "Soumettre",
+      "invalidEmail": "Veuillez utiliser un E-mail valide",
+      "invalidPassword": "Veuillez utiliser un mot de passe valide",
+      "invalidLogin": "Votre E-mail ou mot de passe est incorrect",
+      "invalidName": "Veuillez entrer un nom valide",
+      "invalidSignup": "Cet E-mail est déja associé à un compte",
+      "invalidConfirmPassword": "Vos mots de passe doivent être identiques"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.active {
+    border-bottom: 1px solid rgb(238, 181, 80);
+}
+
+.nav-link {
+    color: rgb(79, 126, 225);
+
+    &:hover {
+        background-color: rgba(79, 126, 225, 0.075);
+    }
+}
+
+.auth-submit, .auth-submit:hover, .auth-submit:active {
+    background-color: rgb(238, 181, 80);
+    border-color: rgb(238, 181, 80);
+
+    &:hover, &:active:active {
+        background-color: rgb(241, 199, 127);
+        border-color: rgb(241, 199, 127);
+    }
+}
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
