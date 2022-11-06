@@ -6,9 +6,11 @@ import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import { useTranslation } from 'react-i18next';
 
 function FeaturedPost(props) {
   const { post } = props;
+  const { t } = useTranslation();
 
   return (
     <Grid item xs={12} md={6}>
@@ -25,7 +27,7 @@ function FeaturedPost(props) {
               {post.description}
             </Typography>
             <Typography variant="subtitle1" color="primary">
-              Continue reading...
+              {t("post")}
             </Typography>
           </CardContent>
           <CardMedia

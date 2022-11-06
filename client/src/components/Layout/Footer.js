@@ -4,8 +4,10 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import './navstyle.scss';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
 
   return (
     <>
@@ -21,9 +23,7 @@ function Footer() {
               <Nav className='justify-content-end flex-grow-1 pe-3'>                
                 <div>
                     <p>
-                    Founded in 2013 by Kate Arthur, Digital Moment (formerly Kids Code Jeunesse) is a Canadian-based charity and a global leader in mobilizing communities to build a better future through 
-                    digital skills education. Digital Moment focuses on creating programs and experiences for youth and their communities on digital skills like coding, algorithm and data literacy, and 
-                    artificial intelligence. Digital Moment includes three educational initiatives: Kids Code Jeunesse, Digital2030, and a social innovation lab.
+                      {t("footer")}
                     </p>
                 </div>
               </Nav>
