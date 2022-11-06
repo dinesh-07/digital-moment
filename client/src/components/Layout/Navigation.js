@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
@@ -7,10 +7,14 @@ import Button from "react-bootstrap/Button"
 import Authorization from '../Authorization'
 import './navstyle.scss';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useTranslation } from 'react-i18next';
+import { UserContext } from '../../contexts/User'
 
 function Navigation() {
     const [openAuth, setOpenAuth] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
+    const { t } = useTranslation();
+    const { toggleLang } = useContext(UserContext);
 
 
   return (
@@ -27,10 +31,13 @@ function Navigation() {
             <Offcanvas.Body>
               <Nav className='justify-content-end flex-grow-1 pe-3'>
                 <Nav.Link className='justify-content-center'>
-                  <Button variant='primary' className='rounded-0 nav-auth' onClick={() => { setOpenAuth(true); setIsLogin(true) }}>Login</Button>
+                  <Button variant='primary' className='rounded-0 nav-auth' onClick={() => { setOpenAuth(true); setIsLogin(true) }}>{t("nav.auth.login")}</Button>
                 </Nav.Link>
                 <Nav.Link>
-                  <Button variant='primary' className='rounded-0 nav-auth' onClick={() => { setOpenAuth(true); setIsLogin(false) }}>Sign Up</Button>
+                  <Button variant='primary' className='rounded-0 nav-auth' onClick={() => { setOpenAuth(true); setIsLogin(false) }}>{t("nav.auth.signup")}</Button>
+                </Nav.Link>
+                <Nav.Link>
+                  <Button variant='primary' className='rounded-0' onClick={toggleLang}>{t("lang")}</Button>
                 </Nav.Link>
               </Nav>
             </Offcanvas.Body>

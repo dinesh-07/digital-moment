@@ -1,7 +1,14 @@
 {
-    "nav.auth.email": "Welcome to react using react-i18next",
-    "description": {
-      "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-      "part2": "Switch language between english and german using buttons above."
+  "lang": "EN",
+  "nav": {
+    "auth": {
+      "login": "Accédez",
+      "signup": "Signer",
+      "email": "Courriel",
+      "password": "Mot de passe",
+      "passwordConfirm": "Confirmer le mot de passe",
+      "name": "Votre nom",
+      "submit": "Soumettre"
     }
   }
+}
