@@ -1,8 +1,8 @@
 const Challenge = require('../models/Challenge')
 
-async function saveChallenge(thumnail, name, description, createdBy, city, 
+async function saveChallenge(thumbnail, name, description, createdBy, city,
     country, relatedChallenges, relatedIdeas, tag) {
-    const challenge = Challenge({thumnail, name, description, createdBy, city, 
+    const challenge = Challenge({thumbnail, name, description, createdBy, city,
         country, relatedChallenges, relatedIdeas, tag})
     await challenge.save()
 }
