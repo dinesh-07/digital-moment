@@ -11,7 +11,7 @@ router.post('', async (req, res, next) => {
     } else {
         try {
             const user = await saveUser(name, email, password, isAdmin);
-            res.send(user);
+            res.send({ ...user.toJSON(), password: undefined, createdAt: undefined });
         } catch (error) {
             next(error);
         }

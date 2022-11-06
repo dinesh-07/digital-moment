@@ -2,18 +2,17 @@ import { createContext, useState } from 'react';
 import i18n from '../i18n';
 
 const UserContext = createContext({
-    id: -1,
+    user: {},
     loggedIn: false,
-    setId: null,
+    setUser: null,
     toggleLoggedIn: null,
     toggleLang: null,
 });
 
 const UserProvider = ({ children }) => {
-    console.log(localStorage.getItem('lang'));
     const [lang, setLang] = useState(localStorage.getItem('lang') ?? 'en');
     const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
-    const [id, _setId] = useState(Number.parseInt(localStorage.getItem('id') ?? -1));
+    const [user, _setUser] = useState(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null);
 
     const toggleLang = () => {
         const newLang = lang === 'en' ? 'fr' : 'en';
@@ -27,12 +26,12 @@ const UserProvider = ({ children }) => {
         setLoggedIn(!loggedIn);
     }
 
-    const setId = newId => {
-        _setId(newId);
-        localStorage.setItem('id', newId);
+    const setUser = user => {
+        _setUser(user);
+        localStorage.setItem('user', JSON.stringify(user));
     }
 
-    return <UserContext.Provider value={{ toggleLang, loggedIn, toggleLoggedIn, id, setId }}>{
+    return <UserContext.Provider value={{ toggleLang, loggedIn, toggleLoggedIn, user, setUser }}>{
         children}
         </UserContext.Provider>;
 }
