@@ -19,7 +19,7 @@ router.post('/register-challenge', async (req, res) => {
     }
 })
 
-router.get('/challange/:id', async (req, res) => {
+router.get('/challenge/:id', async (req, res) => {
     const challengeid = req.params.id
     const challenge = await challengeConrtoller.getChallengeById(challengeid)
     res.send(challenge)
