@@ -1,17 +1,18 @@
 import Navigation from './components/Layout/Navigation';
 import Preview from './components/Preview';
-import './App.css';
-import React from 'react'
-import i18n from './i18n';
 import Footer from './components/Layout/Footer';
+import { useContext } from 'react'
+import { UserContext } from './contexts/User';
+import './App.css';
 
 function App() {
+  const { toggleLang } = useContext(UserContext);
   return (
     <div>
       <Navigation />
       <Preview />
-      <button onClick={() => i18n.changeLanguage("fr")}>Lng</button>
       <Footer />
+      <button onClick={toggleLang}>Lng</button>
     </div>
   );
 }
