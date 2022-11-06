@@ -6,6 +6,7 @@ const cors = require('cors')
 const { connect } = require('./helper/connection');
 const users = require('./routes/api/user');
 const challenges = require('./routes/api/challenge');
+const auth = require('./routes/auth');
 
 const app = express();
 
@@ -22,6 +23,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use('/api/users/', users);
 app.use('/api/challenge', challenges);
+app.use('/api/auth', auth);
 
 
 // disconnect from database when server disconnects

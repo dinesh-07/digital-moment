@@ -1,8 +1,9 @@
 const User = require('../models/User')
 
-async function saveUser(name, areaofintrest, email, password) {
-    const user = User({name, areaofintrest, email, password})
+async function saveUser(name, email, password, isAdmin) {
+    const user = User({name, email, password, isAdmin})
     await user.save()
+    return user;
 }
 
 async function getAllUsers() {
@@ -13,5 +14,9 @@ async function getUserById(id) {
     return await User.find({_id: id})
 }
 
+async function getUserByEmail(email) {
+    return await User.findOne({ email });
+}
+
 // further customise as per the needs.
-module.exports = {saveUser, getAllUsers, getUserById}
+module.exports = { saveUser, getAllUsers, getUserById, getUserByEmail }
