@@ -58,8 +58,8 @@ const PostForm = () => {
 
         <Form.Group as = {Row} className = "mb-4">
                 <Form.Label column sm = {2}>Description</Form.Label>
-                <Col sm={9}>
-                  <Form.Control as = "textarea" placeholder = "Describe your challenge" style={{ minHeight: 100 }}/>
+                <Col lg={9}>
+                  <Form.Control as = "textarea" placeholder = "Describe your challenge" style={{ minHeight: 270 }}/>
                 </Col>
         </Form.Group>
 
