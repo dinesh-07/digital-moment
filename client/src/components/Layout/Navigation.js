@@ -9,9 +9,11 @@ import "./navstyle.scss";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useTranslation } from "react-i18next";
 import { UserContext } from "../../contexts/User";
+import CreatePost from "../PostForm/CreatePost"
 
 function Navigation() {
   const [openAuth, setOpenAuth] = useState(false);
+  const [showCreatePost, setShowCreatePost] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const { t } = useTranslation();
   const { toggleLang, user, setUser, toggleLoggedIn } = useContext(UserContext);
@@ -29,6 +31,10 @@ function Navigation() {
         openLogin={isLogin}
         setOpenLogin={setIsLogin}
       />
+      <CreatePost 
+        show={showCreatePost}
+        setShow={setShowCreatePost}/>
+
       <Navbar
         collapseOnSelect
         expand="md"
@@ -79,6 +85,7 @@ function Navigation() {
                 <Offcanvas.Header closeButton className="justify-content-end" />
                 <Offcanvas.Body>
                   <Nav className="justify-content-end align-items-center flex-grow-1 pe-3">
+                    
                     <Nav.Link className="justify-content-center">
                       <Button
                         variant="primary"
@@ -91,6 +98,8 @@ function Navigation() {
                         {t("nav.auth.login")}
                       </Button>
                     </Nav.Link>
+
+                      
                     <Nav.Link>
                       <Button
                         variant="primary"
@@ -110,6 +119,15 @@ function Navigation() {
                         onClick={toggleLang}
                       >
                         {t("lang")}
+                      </Button>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <Button
+                        variant="primary"
+                        className="rounded-0"
+                        onClick={() => setShowCreatePost(true)}
+                      >
+                        +
                       </Button>
                     </Nav.Link>
                   </Nav>

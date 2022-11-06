@@ -6,7 +6,7 @@ const router = express.Router();
 const challengeConrtoller = require('../../controllers/ChallengeController');
 
 
-router.post('/register-challenge', async (req, res) => {
+router.post('', async (req, res) => {
     const { thumbnail, name, description, createdBy, city,
         country, relatedChallenges, relatedIdeas, tag }  = req.body
 
@@ -25,7 +25,7 @@ router.get('/challenge/:id', async (req, res) => {
     res.send(challenge)
 })
 
-router.get('/get-challenges', async (_request, res) => {
+router.get('', async (_request, res) => {
     try {
         const challenges = await challengeConrtoller.getAllChallenge();
         res.send(challenges);

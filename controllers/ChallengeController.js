@@ -5,6 +5,7 @@ async function saveChallenge(thumbnail, name, description, createdBy, city,
     const challenge = Challenge({thumbnail, name, description, createdBy, city,
         country, relatedChallenges, relatedIdeas, tag})
     await challenge.save()
+    return challenge;
 }
 
 async function getAllChallenge() {
