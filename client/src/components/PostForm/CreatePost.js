@@ -24,7 +24,7 @@ const CreatePost = ({ show, setShow }) => {
           </Nav>
         </Modal.Header>
         <Modal.Body>
-          <PostForm/>
+          <PostForm isChallenge = {isChallenge}/>
         </Modal.Body>
         <Modal.Footer>
         <Button variant="secondary" onClick={() => setShow(false)} 
