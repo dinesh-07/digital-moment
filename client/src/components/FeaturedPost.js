@@ -62,6 +62,7 @@ function FeaturedPost({ post, type }) {
       <CardActionArea disableRipple style={{ cursor: 'default' }}>
         <Card sx={{ display: "flex" }}>
           <CardContent sx={{ flex: 1 }}>
+            { user ?
             <div
               className="d-flex gap-2"
               onMouseDown={(e) => {
@@ -82,7 +83,7 @@ function FeaturedPost({ post, type }) {
               <Typography onClick={(e) => e.preventDefault()}>
                 {upvotes}
               </Typography>
-            </div>
+            </div> : null }
             <Typography variant="h5">
               {post.name.slice(0, 75) + (post.name.length > 75 ? "..." : "")}
             </Typography>
