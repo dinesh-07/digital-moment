@@ -19,7 +19,7 @@ export default function Preview() {
     imageText: 'main image description',
     linkText: 'Continue reading…',
   };
-  
+
 
   const [featuredPosts, getFeaturedPosts] = useState([]);
 
@@ -29,7 +29,6 @@ export default function Preview() {
 
   const getAllPosts = () => {
     axios.get('/ideas').then((response) => {
-      console.log(response.data)
       const allPosts = response.data;
       getFeaturedPosts(allPosts)
     })
@@ -42,7 +41,7 @@ export default function Preview() {
         <MainFeaturedPost post={mainFeaturedPost} />
         <Grid container spacing={4}>
         {featuredPosts.map((post) => (
-            <FeaturedPost type='idea' key={post.title} post={post} />
+            <FeaturedPost type='idea' key={post.name} post={post} />
         ))}
         </Grid>
         <Grid container spacing={5} sx={{ mt: 3 }}></Grid>

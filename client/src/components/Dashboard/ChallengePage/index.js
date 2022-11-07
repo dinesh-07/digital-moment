@@ -28,7 +28,6 @@ export default function Preview() {
 
   const getAllPosts = () => {
     axios.get('/challenges').then((response) => {
-      console.log(response.data)
       const allPosts = response.data;
       getFeaturedPosts(allPosts)
     })
