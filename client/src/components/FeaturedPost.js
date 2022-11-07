@@ -7,7 +7,10 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useTranslation } from 'react-i18next';
-import { tags } from "./Dashboard/tags"
+import { tags } from "./Dashboard/tags";
+import { Button } from '@mui/material';
+import EmojiFlagsOutlinedIcon from '@mui/icons-material/EmojiFlagsOutlined';
+import FlagIcon from '@mui/icons-material/Flag';
 
 
 
@@ -19,9 +22,7 @@ function getImage(tag){
   }
   return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOpRO11pfNTX5nuwEvx7Zd_Y0_kfmo8-ioXSFL2RI3&s"
 }
-import { Button } from '@mui/material';
-import EmojiFlagsOutlinedIcon from '@mui/icons-material/EmojiFlagsOutlined';
-import FlagIcon from '@mui/icons-material/Flag';
+
 
 function FeaturedPost(props) {
   const { post } = props;
