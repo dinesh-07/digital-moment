@@ -14,12 +14,8 @@ function Footer() {
       <Navbar collapseOnSelect expand="md" bg="light" variant="light" className='flex mt-4'>
         <Container>
           <Navbar.Brand href="#home">
-              <img alt='logo' src ="https://digitalmoment.org/img/logo-DM-dark.png" className='logo'/>
+              <img alt='logo' src ="https://digitalmoment.org/img/logo-DM-dark.png" className='w-100 justify-center'/>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Offcanvas id="responsive-navbar-nav" placement="end">
-            <Offcanvas.Header closeButton className='justify-content-end'/>
-            <Offcanvas.Body>
               <Nav className='justify-content-end flex-grow-1 pe-3'>                
                 <div>
                     <p>
@@ -39,8 +35,6 @@ function Footer() {
                 </iframe>
               </Nav>
               
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
         </Container>
       </Navbar>
     </>
