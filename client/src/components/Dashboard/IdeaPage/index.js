@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import MainFeaturedPost from '../../MainFeaturePost';
-import FeaturedPost from '../../FuturedPost';
+import FeaturedPost from '../../FeaturedPost';
 import _axios from 'axios';
 import { env } from '../../../env'
 import {useState, useEffect} from 'react';

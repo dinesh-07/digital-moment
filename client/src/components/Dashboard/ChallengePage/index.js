@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import MainFeaturedPost from '../../MainFeaturePost';
-import FeaturedPost from '../../FuturedPost';
+import FeaturedPost from '../../FeaturedPost';
 import _axios from 'axios';
 import { env } from '../../../env'
 import {useState, useEffect} from 'react';
@@ -42,7 +42,7 @@ export default function Preview() {
         <MainFeaturedPost post={mainFeaturedPost} />
         <Grid container spacing={4}>
         {featuredPosts.map((post) => (
-            <FeaturedPost key={post.title} post={post} />
+            <FeaturedPost key={post.name} post={post} />
         ))}
         </Grid>
         <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
