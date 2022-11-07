@@ -29,6 +29,13 @@ router.get('/get-challenge/:id', async (req, res) => {
     res.send(challenge)
 })
 
+// filter challenge by city
+router.get('/filter-challenge/:city', async (req, res) => {
+    const challengecity = req.params.city
+    const challenge = await challengeConrtoller.getChallengeByCity(challengecity)
+    res.send(challenge)
+})
+
 router.get('/get-challenges', async (_request, res) => {
     try {
         const challenges = await challengeConrtoller

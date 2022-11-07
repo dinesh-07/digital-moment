@@ -15,5 +15,10 @@ async function getChallengeById(id) {
     return await Challenge.find({_id: id})
 }
 
+
+async function getChallengeByCity(city){
+    return await Challenge.find({city:city})
+}
+
 // further customise as per the needs.
-module.exports = {saveChallenge, getAllChallenge, getChallengeById}
+module.exports = {saveChallenge, getAllChallenge, getChallengeById, getChallengeByCity}
