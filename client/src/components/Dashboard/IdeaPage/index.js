@@ -5,21 +5,21 @@ import FeaturedPost from '../../FeaturedPost';
 import _axios from 'axios';
 import { env } from '../../../env'
 import {useState, useEffect} from 'react';
+import { useTranslation } from 'react-i18next';
 
 const axios = _axios.create({ baseURL: `${env.appServer}` });
 
-const mainFeaturedPost = {
-  title: 'Good Study Habits',
-  description:
-  "Your study habits can make a night and day difference in your results, learn how to organize yourself and start benefitting...",
-  image: 'https://www.rmusentrymedia.com/wp-content/uploads/2018/02/StudyHabits2.jpg',
-  imageText: 'main image description',
-  linkText: 'Continue reading…',
-};
-
-
-
 export default function Preview() {
+
+  const { t } = useTranslation();
+  const mainFeaturedPost = {
+    title: t("ideatitle"),
+    description: t("ideahero"),
+    image: 'https://www.rmusentrymedia.com/wp-content/uploads/2018/02/StudyHabits2.jpg',
+    imageText: 'main image description',
+    linkText: 'Continue reading…',
+  };
+  
 
   const [featuredPosts, getFeaturedPosts] = useState([]);
 

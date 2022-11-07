@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Modal, Nav} from 'react-bootstrap';
 import PostForm from './PostForm';
 import "./style.scss";
+import { useTranslation } from 'react-i18next';
 
 const CreatePost = ({ show, setShow }) => {
+  const { t } = useTranslation();
   const [isChallenge, setIsChallenge] = useState(true)
 
   return (
@@ -14,10 +16,10 @@ const CreatePost = ({ show, setShow }) => {
             onSelect={key => setIsChallenge(key === 'challenge')}
             >
               <Nav.Item>
-                <Nav.Link eventKey='challenge'>Challenge</Nav.Link>
+                <Nav.Link eventKey='challenge'>{t("challenge")}</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='idea'>Idea</Nav.Link>
+                <Nav.Link eventKey='idea'>{t("idea")}</Nav.Link>
               </Nav.Item>
           </Nav>
         </Modal.Header>
