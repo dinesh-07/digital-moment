@@ -16,10 +16,10 @@ const Dashboard = ({ show, setShow, openLogin, setOpenLogin }) => {
     onSelect={key => setIsChallenge(key === 'challenge')}
     >
         <Nav.Item>
-            <Nav.Link style={ {fontSize: "40px"} }eventKey='challenge'>{t("challenge")}</Nav.Link>
+            <Nav.Link style={{ fontSize: 'calc(10pt + 1vw)' }}eventKey='challenge'>{t("challenge")}</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link style={ { color: "rgb(238, 181, 80)", fontSize: "40px", marginLeft: "100px"}} eventKey='idea'>{t("idea")}</Nav.Link>
+            <Nav.Link style={ { color: "rgb(238, 181, 80)", fontSize: 'calc(10pt + 1vw)', marginLeft: "50px"}} eventKey='idea'>{t("idea")}</Nav.Link>
         </Nav.Item>
     </Nav>
     { isChallenge?
