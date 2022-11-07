@@ -1,5 +1,4 @@
 import { useState} from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -8,8 +7,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useTranslation } from 'react-i18next';
 import { tags } from "./Dashboard/tags"
-
-
+import EmojiFlagsOutlinedIcon from '@mui/icons-material/EmojiFlagsOutlined';
+import FlagIcon from '@mui/icons-material/Flag';
 
 function getImage(tag){
   for (let i = 0; i < tags.length; i++){
@@ -19,9 +18,6 @@ function getImage(tag){
   }
   return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOpRO11pfNTX5nuwEvx7Zd_Y0_kfmo8-ioXSFL2RI3&s"
 }
-import { Button } from '@mui/material';
-import EmojiFlagsOutlinedIcon from '@mui/icons-material/EmojiFlagsOutlined';
-import FlagIcon from '@mui/icons-material/Flag';
 
 function FeaturedPost(props) {
   const { post } = props;
@@ -31,19 +27,19 @@ function FeaturedPost(props) {
   const handleUpvote = e => {
     e.stopPropagation();
     e.preventDefault();
-    
+
     if (upvoted) {
-      setUpvoted(false); 
+      setUpvoted(false);
       setUpvotes(upvotes - 1)
     }
     else {
-      setUpvoted(true) 
+      setUpvoted(true)
       setUpvotes(upvotes + 1)
     }
-    
-  }; 
 
-  
+  };
+
+
 
 
   return (
@@ -52,7 +48,7 @@ function FeaturedPost(props) {
         <Card sx={{ display: 'flex' }}>
           <CardContent sx={{ flex: 1 }}>
             <div className='d-flex gap-2 upvoter' onMouseDown={(e) => {e.stopPropagation()}}>
-              {upvoted ? 
+              {upvoted ?
                 <FlagIcon style={{ color: "rgb(238, 181, 80)" }} onClick = { handleUpvote } />
               :
                 <EmojiFlagsOutlinedIcon style={{color: "rgb(79, 126, 225)"}} onClick = { handleUpvote } />
