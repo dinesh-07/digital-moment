@@ -6,14 +6,15 @@ const router = express.Router();
 
 
 router.post('', async (req, res, next) => {
-    const { thumbnail, name, description, createdBy, city,
+    const { name, description, createdBy, city,
         country, relatedChallenges, relatedIdeas, tag }  = req.body
 
     try {
-        const idea = await saveIdea(thumbnail, name, description, createdBy, city,
+        const idea = await saveIdea(name, description, createdBy, city,
             country, relatedChallenges, relatedIdeas, tag)
         res.send(idea);
     } catch(error) {
+        console.log(error);
         next(new Error("Error creating idea"));
     }
 })
