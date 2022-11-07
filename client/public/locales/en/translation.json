@@ -22,5 +22,39 @@
   "footer": "Founded in 2013 by Kate Arthur, Digital Moment (formerly Kids Code Jeunesse) is a Canadian-based charity and a global leader in mobilizing communities to build a better future through digital skills education. Digital Moment focuses on creating programs and experiences for youth and their communities on digital skills like coding, algorithm and data literacy, and artificial intelligence. Digital Moment includes three educational initiatives: Kids Code Jeunesse, Digital2030, and a social innovation lab.",
   "post": "Continue reading...",
   "challenge": "Challenges",
-  "idea": "Ideas"
+  "idea": "Ideas",
+  "challengehero" : "An ongoing series of protests and civil unrest against the government of Iran began in Tehran on 16 September 2022 as a reaction to the death of 22-year-old Mahsa Amini...",
+  "ideahero" : "Your study habits can make a night and day difference in your results, learn how to organize yourself and start benefitting...",
+  "challengetitle" : "Mahsa Amini protests",
+  "ideatitle" : "Good Study Habits",
+  "nopoverty" : "No Poverty",
+  "zerohunger" : "Zero Hunger",
+  "healthwellbeing" : "Good Health and Well-Being",
+  "qualityeducation" : "Quality Education",
+  "genderequality" : "Gender Equality",
+  "cleanwatersanitation" : "Clean Water and Sanitation",
+  "cleanenergy" : "Affordable and Clean Energy",
+  "economic" : "Decent Work and Economic Growth",
+  "industry" : "Industry, Innovation, and Infrastructure",
+  "reduced" : "Reduced Inequalities",
+  "suscities" : "Sustainable Cities and Communities",
+  "consumption" : "Responsible Consumption and Production",
+  "climate" : "Climate Action",
+  "lifewater" : "Life Below Water",
+  "lifeland" : "Life On Land",
+  "peace" : "Peace, Justice, and Strong Institutions",
+  "partners" : "Partnerships for the Goals",
+  "tags": "Tags",
+  "posttitle": "Title",
+  "city": "City",
+  "country" : "Country",
+  "cancel" : "Cancel",
+  "done" : "Done",
+  "descplease" : "Please enter a description",
+  "describeyourchallenge" : "Describe your challenge",
+  "describeyouridea" : "Describe your idea"
+  
+
+  
+
 }
