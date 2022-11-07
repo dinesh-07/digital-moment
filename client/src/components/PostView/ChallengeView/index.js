@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import _axios from 'axios';
 import { env } from '../../../env';
+import Post from '../../DetailedPost/Post'
 
 const axios = _axios.create({ baseURL: env.appServer });
 
