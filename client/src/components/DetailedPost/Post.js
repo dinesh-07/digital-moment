@@ -7,6 +7,9 @@ import PostContent from './PostContent';
 import Sidebar from './Sidebar';
 import Nav from 'react-bootstrap/Nav'
 import { useTranslation } from 'react-i18next';
+import Comments from './Comments'
+
+
 const theme = createTheme();
 
 const Post = () => {
@@ -25,11 +28,11 @@ const Post = () => {
         <main>
           
           <Grid container spacing={6} sx={{ mt: 10 }}>
-            <PostContent title="From the firehose"/>
             <Sidebar/>
+            <PostContent title="From the firehose"/>
           </Grid>
         </main>
-
+      <Comments/>
       </Container>
     </ThemeProvider>
   )

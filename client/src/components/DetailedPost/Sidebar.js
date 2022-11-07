@@ -14,33 +14,22 @@ const social = [
     { name: 'Facebook', icon: FacebookIcon },
   ]
 
-const Sidebar = () => {
+const Sidebar = ({tags}) => {
   return (
     <Grid item xs={12} md={4}>
       <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
         <Typography variant="h6" gutterBottom>
           User
         </Typography>
-        <Typography>{'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.'}</Typography>
+        <Stack direction="row" spacing={1} alignItems="center">
+            <span></span>
+          </Stack>
       </Paper>
 
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
-      {social.map((network) => (
-        <Link
-          display="block"
-          variant="body1"
-          href="#"
-          key={network.name}
-          sx={{ mb: 0.5 }}
-        >
-          <Stack direction="row" spacing={1} alignItems="center">
-            <network.icon />
-            <span>{network.name}</span>
-          </Stack>
-        </Link>
-      ))}
+    
     </Grid>
   )
 }
