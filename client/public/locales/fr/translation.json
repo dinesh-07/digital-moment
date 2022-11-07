@@ -19,8 +19,40 @@
       "invalidConfirmPassword": "Vos mots de passe doivent être identiques"
     }
   },
-  "footer": "Fondé en 2013 par Kate Arthur, Digital Moment (anciennement Kids Code Jeunesse) est un organisme de bienfaisance basé au Canada et un leader mondial dans la mobilisation des communautés pour bâtir un avenir meilleur grâce à l'éducation aux compétences numériques. Digital Moment se concentre sur la création de programmes et d'expériences pour les jeunes et leurs communautés sur les compétences numériques comme le codage, la littératie des algorithmes et des données, et l'intelligence artificielle. Digital Moment comprend trois initiatives éducatives: Kids Code Jeunesse, Digital2030, et un lab d'innovation sociale.",
+  "footer": "Fondé en 2013 par Kate Arthur, Digital Moment (anciennement Kids Code Jeunesse) est un organisme de bienfaisance basé au Canada et un leader mondial dans la mobilisation des communautés pour bâtir un avenir meilleur grâce à l'éducation aux compétences numériques.",
   "post": "Continuer a lire...",
   "challenge": "Défis",
-  "idea": "Idées"
+  "idea": "Idées",
+  "challengehero" : "La série de manifestations contre le gouvernement Iranien se poursuit toujours. Déclenchée par la mort de Mahsa Amine, une jeune femme de 22 ans, aux mains de la police de la moralité...", 
+  "ideahero" : "Vos habitudes de travail peuvent faire toute la différence par rapport à vos études, apprenez comment vous organisez dès aujourd'hui...",
+  "challengetitle" : "Les protestes Mahsa Amini",
+  "ideatitle" : "Des méthodes d'études efficaces",
+  "nopoverty" : "Pas de pauvreté",
+  "zerohunger" : "Faim <<ZÉRO>>",
+  "healthwellbeing" : "Bonne santé et bien-être",
+  "qualityeducation" : "Éducation de qualité",
+  "genderequality" : "Égalité entre les sexes",
+  "cleanwatersanitation" : "Eau propre et assainissement",
+  "cleanenergy" : "Énergie propre et d'un coût abordable",
+  "economic" : "Travail décent et croissance économique",
+  "industry" : "Industrie, Innovation et Infrastructure",
+  "reduced" : "Inégalités réduites",
+  "suscities" : "Villes et communautés durables",
+  "consumption" : "Consommation et production responsables",
+  "climate" : "Mesures relatives à la lutte contre les changements climatiques",
+  "lifewater" : "Vie aquatique",
+  "lifeland" : "Vie terrestre",
+  "peace" : "Paix, justice et institutions efficaces",
+  "partners" : "Parternariats pour la réalisation des objectifs",
+  "tags": "Catégories",
+  "posttitle": "Titre",
+  "city": "Ville",
+  "country" : "Pays",
+  "cancel" : "Annuler",
+  "done" : "Terminer",
+  "descplease" : "Veuillez entrer une description",
+  "describeyourchallenge" : "Décrivez votre défi",
+  "describeyouridea" : "Décrivez votre idée"
+  
+
 }
