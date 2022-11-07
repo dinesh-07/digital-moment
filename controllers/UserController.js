@@ -7,11 +7,11 @@ async function saveUser(name, email, password, isAdmin) {
 }
 
 async function getAllUsers() {
-    return await User.find({})
+    return await User.find({});
 }
 
 async function getUserById(id) {
-    return await User.find({_id: id})
+    return await User.findOne({_id: id});
 }
 
 async function getUserByEmail(email) {
