@@ -8,7 +8,6 @@ import Header from './Header';
 import MainFeaturedPost from './MainFeaturePost';
 import FeaturedPost from './FuturedPost';
 import _axios from 'axios';
-import { useState, useEffect } from "react"
 import { env } from '../env'
 
 
@@ -48,7 +47,7 @@ export default function Preview() {
 
 
   const getAllPosts = () => {
-    axios.get('challenges/get-challenges').then((response) => {
+    axios.get('/challenges').then((response) => {
       console.log(response.data)
       const allPosts = response.data;
       getFeaturedPosts(allPosts)
