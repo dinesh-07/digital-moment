@@ -1,13 +1,13 @@
 import Navigation from './components/Layout/Navigation';
-import Preview from './components/Preview';
 import Footer from './components/Layout/Footer';
 import './App.css';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <div>
       <Navigation />
-      <Preview />
+      <Dashboard />
       <Footer />
     </div>
   );

@@ -40,7 +40,9 @@ function Navigation() {
         expand="md"
         bg="light"
         variant="light"
-        className="py-4 px-3"
+        className="py-4 px-3 main-nav"
+        fixed="top"
+      
       >
         <Container className="mx-0 mw-100 flex-grow-1">
           <Navbar.Brand href="/" className="ms-3">
