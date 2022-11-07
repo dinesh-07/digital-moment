@@ -13,7 +13,7 @@ async function getAllIdeas() {
 }
 
 async function getIdeaById(id) {
-    return await Idea.find({_id: id})
+    return await Idea.findOne({_id: id})
 }
 
 // further customise as per the needs

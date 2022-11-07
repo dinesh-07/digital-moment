@@ -19,10 +19,15 @@ router.post('', async (req, res, next) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
     const challengeId = req.params.id
-    const challenge = await getChallengeById(challengeId)
-    res.send(challenge)
+
+    try {
+        const challenge = await getChallengeById(challengeId);
+        res.send(challenge);
+    } catch(error) {
+        next(new Error('Could not find challenge'));
+    }
 })
 
 router.get('', async (_request, res) => {
