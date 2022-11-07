@@ -16,7 +16,7 @@ const PostContent = ({title, description}) => {
         },
       }}
     >
-        <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
+        <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200', minHeight: '30vh'}}>
             <Typography variant="h4" gutterBottom>
               {title}
             </Typography>

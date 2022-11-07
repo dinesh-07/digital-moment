@@ -1,46 +1,29 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import Chip from '@mui/material/Chip';
+import { Container } from 'react-bootstrap';
 
-const social = [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'Twitter', icon: TwitterIcon },
-    { name: 'Facebook', icon: FacebookIcon },
-  ]
 
-const Sidebar = () => {
+const Sidebar = ({city, country, tags}) => {
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={4} sx = {{mt:5, mb: 10}}>
       <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
-        <Typography variant="h6" gutterBottom>
-          User
+        <Typography variant="h6">
+          {city ? `${city}`: ""}
         </Typography>
-        <Typography>{'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.'}</Typography>
+        <Typography variant="h7">
+          {country ? `${country}`: ""}
+        </Typography>
+        <Container>
+                  {tags.map((tag) => (
+                          <Container className = "pt-3">
+                            <Chip key = {tag} label={tag}/>
+                          </Container>
+                        ))}
+        </Container>
       </Paper>
-
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Social
-      </Typography>
-      {social.map((network) => (
-        <Link
-          display="block"
-          variant="body1"
-          href="#"
-          key={network.name}
-          sx={{ mb: 0.5 }}
-        >
-          <Stack direction="row" spacing={1} alignItems="center">
-            <network.icon />
-            <span>{network.name}</span>
-          </Stack>
-        </Link>
-      ))}
     </Grid>
   )
 }

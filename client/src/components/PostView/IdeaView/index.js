@@ -16,11 +16,11 @@ const IdeaView = () => {
         axios.get(`/ideas/${id}`)
             .then(response => response.data ? setPost(response.data) : navigate('/'))
             .catch(e => navigate('/'));
-    });
+    },[]);
 
     return (
         <div>
-            <Post isChallenge={true} post={post}/>
+            {post ? <Post isChallenge={false} post={post}/> : console.log("Error")}
         </div>
 
     );

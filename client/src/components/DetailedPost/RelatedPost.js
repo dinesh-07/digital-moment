@@ -43,7 +43,7 @@ function RelatedPost(props) {
 
 
   return (
-    <Grid item xs={12} >
+    <Grid item xs={12} md={12} >
       <CardActionArea component="a" href='#'>
         <Card sx={{ display: 'flex' }}>
           <CardContent sx={{ flex: 1 }}>
