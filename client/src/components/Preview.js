@@ -7,7 +7,19 @@ import {useState, useEffect} from 'react';
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturePost';
 import FeaturedPost from './FuturedPost';
-import { postDownloader } from './Services/postDownloader';
+import _axios from 'axios';
+import { useState, useEffect } from "react"
+import { env } from '../env'
+
+
+
+
+
+
+
+
+const axios = _axios.create({ baseURL: `${env.appServer}/api` });
+
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
@@ -19,17 +31,31 @@ const mainFeaturedPost = {
 };
 
 
+
+
+
+
+
 const theme = createTheme();
 
 export default function Preview() {
 
-  const [posts, setPost] = useState()
+  const [featuredPosts, getFeaturedPosts] = useState([]);
 
-  useEffect(() => {
-    postDownloader().then((items) => {
-      setPost(items)
+  useEffect( () => {
+    getAllPosts();
+  }, []);
+
+
+  const getAllPosts = () => {
+    axios.get('challenges/get-challenges').then((response) => {
+      console.log(response.data)
+      const allPosts = response.data;
+      getFeaturedPosts(allPosts)
     })
-  }, [])
+    .catch(() => console.log("error"))
+  }
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -39,8 +65,15 @@ export default function Preview() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
-          {posts !== undefined && posts.map((post) => (
+            {featuredPosts.map((post) => (
               <FeaturedPost key={post.name} post={post} />
+            ))}
+          </Grid>
+          <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
+
+          <Grid container spacing={4}>
+            {featuredPosts.map((post) => (
+              <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
