@@ -9,10 +9,10 @@ import {useState, useEffect} from 'react';
 const axios = _axios.create({ baseURL: `${env.appServer}` });
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'Mahsa Amini protests',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random',
+    "An ongoing series of protests and civil unrest against the government of Iran began in Tehran on 16 September 2022[12] as a reaction to the death of 22-year-old Mahsa Amini...",
+  image: 'https://i.guim.co.uk/img/media/239815abe37b5a23efcea01a9212efd11c34d6ce/0_150_4500_2700/master/4500.jpg?width=620&quality=45&dpr=2&s=none',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
