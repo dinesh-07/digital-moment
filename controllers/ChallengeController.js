@@ -9,7 +9,7 @@ async function saveChallenge(name, description, createdBy, city,
 }
 
 async function getAllChallenges() {
-    return await Challenge.find({})
+    return await Challenge.find({}).sort({ createdAt: -1 });
 }
 
 async function getChallengeById(id) {
