@@ -14,7 +14,6 @@ router.post('', async (req, res, next) => {
             country, relatedChallenges, relatedIdeas, tag)
         res.send(idea);
     } catch(error) {
-        console.log(error);
         next(new Error("Error creating idea"));
     }
 })
