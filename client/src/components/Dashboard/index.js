@@ -2,14 +2,12 @@ import IdeaPage from './IdeaPage';
 import ChallengePage from './ChallengePage';
 import { useTranslation } from 'react-i18next';
 import Nav from 'react-bootstrap/Nav';
-import Modal from 'react-bootstrap/Modal';
-import { sizing } from '@mui/system';
 import { useState } from 'react';
 
 const Dashboard = ({ show, setShow, openLogin, setOpenLogin }) => {
     const { t } = useTranslation();
     const [isChallenge, setIsChallenge] = useState(true);
-    
+
     return (
 
     <>
@@ -28,10 +26,7 @@ const Dashboard = ({ show, setShow, openLogin, setOpenLogin }) => {
         <ChallengePage />: <IdeaPage />
     }
     </>
-    
-            
     )
 }
 
 export default Dashboard;
-    

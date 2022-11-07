@@ -42,7 +42,7 @@ export default function Preview() {
         <MainFeaturedPost post={mainFeaturedPost} />
         <Grid container spacing={4}>
         {featuredPosts.map((post) => (
-            <FeaturedPost key={post.name} post={post} />
+            <FeaturedPost type='challenge' key={post.name} post={post} />
         ))}
         </Grid>
         <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
