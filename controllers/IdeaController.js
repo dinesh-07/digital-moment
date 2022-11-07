@@ -1,8 +1,8 @@
 const Idea = require('../models/Idea');
 
-async function saveIdea(thumbnail, name, description, createdBy, city,
+async function saveIdea(name, description, createdBy, city,
     country, relatedChallenges, relatedIdeas, tag) {
-    const idea = Idea({thumbnail, name, description, createdBy, city,
+    const idea = Idea({name, description, createdBy, city,
         country, relatedChallenges, relatedIdeas, tag})
     await idea.save()
     return idea;
@@ -17,4 +17,4 @@ async function getIdeaById(id) {
 }
 
 // further customise as per the needs
-module.exports = { saveIdea, getAllIdeas, getIdeaById}
+module.exports = { saveIdea, getAllIdeas, getIdeaById }

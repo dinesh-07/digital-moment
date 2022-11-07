@@ -10,14 +10,7 @@ import FeaturedPost from './FuturedPost';
 import _axios from 'axios';
 import { env } from '../env'
 
-
-
-
-
-
-
-
-const axios = _axios.create({ baseURL: `${env.appServer}/api` });
+const axios = _axios.create({ baseURL: `${env.appServer}` });
 
 
 const mainFeaturedPost = {
@@ -28,12 +21,6 @@ const mainFeaturedPost = {
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
-
-
-
-
-
-
 
 const theme = createTheme();
 

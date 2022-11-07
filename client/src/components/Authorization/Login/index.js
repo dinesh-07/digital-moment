@@ -7,7 +7,7 @@ import _axios from 'axios';
 import { env } from '../../../env';
 import { UserContext } from '../../../contexts/User';
 
-const axios = _axios.create({ baseURL: `${env.appServer}/api` });
+const axios = _axios.create({ baseURL: env.appServer });
 
 const Login = ({ setModal }) => {
   const { t } = useTranslation();

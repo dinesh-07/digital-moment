@@ -5,7 +5,7 @@ const { saveIdea, getIdeaById, getAllIdeas } = require('../../controllers/IdeaCo
 const router = express.Router();
 
 
-router.post('', async (req, res) => {
+router.post('', async (req, res, next) => {
     const { thumbnail, name, description, createdBy, city,
         country, relatedChallenges, relatedIdeas, tag }  = req.body
 

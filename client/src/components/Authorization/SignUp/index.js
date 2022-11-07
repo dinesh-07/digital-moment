@@ -7,7 +7,7 @@ import { isEmail } from 'validator';
 import { env } from '../../../env';
 import _axios from 'axios';
 
-const axios = _axios.create({ baseURL: `${env.appServer}/api` });
+const axios = _axios.create({ baseURL: env.appServer });
 
 const Signup = ({ setModal }) => {
   const { t } = useTranslation();

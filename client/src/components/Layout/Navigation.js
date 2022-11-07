@@ -31,7 +31,7 @@ function Navigation() {
         openLogin={isLogin}
         setOpenLogin={setIsLogin}
       />
-      <CreatePost 
+      <CreatePost
         show={showCreatePost}
         setShow={setShowCreatePost}/>
 
@@ -80,6 +80,15 @@ function Navigation() {
                       {t("lang")}
                     </Button>
                   </Nav.Link>
+                  <Nav.Link>
+                      <Button
+                        variant="primary"
+                        className="rounded-0"
+                        onClick={() => setShowCreatePost(true)}
+                      >
+                        +
+                      </Button>
+                    </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             ) : (
@@ -87,7 +96,7 @@ function Navigation() {
                 <Offcanvas.Header closeButton className="justify-content-end" />
                 <Offcanvas.Body>
                   <Nav className="justify-content-end align-items-center flex-grow-1 pe-3">
-                    
+
                     <Nav.Link className="justify-content-center">
                       <Button
                         variant="primary"
@@ -101,7 +110,7 @@ function Navigation() {
                       </Button>
                     </Nav.Link>
 
-                      
+
                     <Nav.Link>
                       <Button
                         variant="primary"
@@ -121,15 +130,6 @@ function Navigation() {
                         onClick={toggleLang}
                       >
                         {t("lang")}
-                      </Button>
-                    </Nav.Link>
-                    <Nav.Link>
-                      <Button
-                        variant="primary"
-                        className="rounded-0"
-                        onClick={() => setShowCreatePost(true)}
-                      >
-                        +
                       </Button>
                     </Nav.Link>
                   </Nav>
