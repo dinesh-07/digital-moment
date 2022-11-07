@@ -66,21 +66,24 @@ const PostForm = ({ isChallenge, setShow }) => {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
 
-  const onChange = (changeState) => (e) => changeState(e.target.value);
+  const [titleError, setTitleError] = useState(false);
+  const [descError, setDescError] = useState(false);
+  const [creationError, setCreationError] = useState(false);
+
+  const onChange = (changeState, clearError = (v) => {}) => (e) => { changeState(e.target.value); clearError(false); setCreationError(false); };
 
   const createPost = () => {
-    console.log(title, desc);
     if (title.length > 0 && desc.length > 0) {
       axios.post(isChallenge ? '/challenges/' : '/ideas', { name: title, description: desc, createdBy: user._id, city, country, relatedChallenges: [], relatedIdeas: [], tag: selectedTags.map(t => t.value) })
         .then(() => {
           setShow(false);
         })
-        .catch((e) => console.log(e));
+        .catch((e) => setCreationError(true));
     } else {
-      // if (!isEmail(email))
-      //   setEmailError(true);
-      // if (password.length === 0)
-      //   setPasswordError(true);
+      if (title.length === 0)
+        setTitleError(true);
+      if (desc.length === 0)
+        setDescError(true);
     }
   };
 
@@ -104,7 +107,8 @@ const PostForm = ({ isChallenge, setShow }) => {
       <Form.Group as = {Row} className = "mb-4">
         <Form.Label column sm = {2} >Title</Form.Label>
         <Col sm={9}>
-          <Form.Control type = "text" placeholder = "Title" value={title} onChange={onChange(setTitle)}/>
+          <Form.Control type = "text" placeholder = "Title" value={title} onChange={onChange(setTitle, setTitleError)} isInvalid={titleError}/>
+          { titleError ? <p className='text-danger mt-1 ms-1' style={{ fontSize: 12 }}>Please enter a title</p> : null}
         </Col>
       </Form.Group>
       <Form.Group as={Row} className="mb-4">
@@ -117,8 +121,10 @@ const PostForm = ({ isChallenge, setShow }) => {
             placeholder={`Describe your ${isChallenge ? "challenge" : "idea"}`}
             style={{ minHeight: 100 }}
             value={desc}
-            onChange={onChange(setDesc)}
+            onChange={onChange(setDesc, setDescError)}
+            isInvalid={descError}
           />
+          { descError ? <p className='text-danger mt-1 ms-1' style={{ fontSize: 12 }}>Please enter a description</p> : null}
         </Col>
       </Form.Group>
       <Row>
@@ -135,11 +141,12 @@ const PostForm = ({ isChallenge, setShow }) => {
         <Button variant="primary" onClick={() => setShow(false)}
             className='w-25 rounded-0 form-submit'>
             Cancel
-          </Button>
-          <Button variant="primary" onClick={createPost} className='w-25 rounded-0 form-submit'>
-            Done
-          </Button>
-        </div>
+        </Button>
+        <Button variant="primary" onClick={createPost} className='w-25 rounded-0 form-submit'>
+          Done
+        </Button>
+      </div>
+      { creationError ? <p className='text-danger mt-1 ms-1' style={{ fontSize: 12, alignSelf: 'center' }}>Unable to create your { isChallenge ? 'challenge' : 'idea'}. Please try again later.</p> : null}
     </Form>
   );
 };

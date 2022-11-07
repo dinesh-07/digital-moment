@@ -9,11 +9,11 @@ async function saveIdea(name, description, createdBy, city,
 }
 
 async function getAllIdeas() {
-    return await Idea.find({})
+    return await Idea.find({}).sort({ createdAt: -1 });
 }
 
 async function getIdeaById(id) {
-    return await Idea.find({_id: id})
+    return await Idea.findOne({_id: id})
 }
 
 // further customise as per the needs

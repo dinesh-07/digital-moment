@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import MainFeaturedPost from '../../MainFeaturePost';
-import FeaturedPost from '../../FuturedPost';
+import FeaturedPost from '../../FeaturedPost';
 import _axios from 'axios';
 import { env } from '../../../env'
 import {useState, useEffect} from 'react';
@@ -9,10 +9,10 @@ import {useState, useEffect} from 'react';
 const axios = _axios.create({ baseURL: `${env.appServer}` });
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'Good Study Habits',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random',
+  "Your study habits can make a night and day difference in your results, learn how to organize yourself and start benefitting...",
+  image: 'https://www.rmusentrymedia.com/wp-content/uploads/2018/02/StudyHabits2.jpg',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };

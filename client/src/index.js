@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import './custom.scss';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import './i18n'
 import { UserProvider } from './contexts/User';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ChallengeView from './components/PostView/ChallengeView';
+import IdeaView from './components/PostView/IdeaView'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <UserProvider>
-    <App />
+    <Router>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/challenge/:id' element={<ChallengeView />} />
+        <Route path='/idea/:id' element={<IdeaView />} />
+        <Route path='*' element={<App />} />
+      </Routes>
+    </Router>
   </UserProvider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
