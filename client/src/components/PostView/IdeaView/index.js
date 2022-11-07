@@ -16,7 +16,12 @@ const IdeaView = () => {
             .catch(e => navigate('/'));
     });
 
-    return <div>{JSON.stringify(post)}</div>;
+    return (
+        <div>
+            <Post isChallenge={true} post={post}/>
+        </div>
+
+    );
 };
 
 export default IdeaView;

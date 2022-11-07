@@ -4,11 +4,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 
-
-const temp = " Zǎoshang hǎo zhōngguó xiànzài wǒ yǒu BING CHILLING 🥶🍦 wǒ hěn xǐhuān BING CHILLING 🥶🍦 dànshì sùdù yǔ jīqíng 9 bǐ BING CHILLING 🥶🍦 sùdù yǔ jīqíng sùdù yǔ jīqíng 9 wǒ zuì xǐhuān suǒyǐ…xiànzài shì yīnyuè shíjiān zhǔnbèi 1 2 3 liǎng gè lǐbài yǐhòu sùdù yǔ jīqíng 9 ×3 bùyào wàngjì bùyào cu òguò jìdé qù diànyǐngyuàn kàn sùdù yǔ jīqíng 9 yīn wéi fēicháng hǎo diànyǐng dòngzuò fēicháng hǎo chàbùduō yīyàng BING CHILLING 🥶🍦zàijiàn 🥶🍦"
-            
-
-const PostContent = ({title}) => {
+const PostContent = ({title, description}) => {
   return (
     <Grid
       item
@@ -22,11 +18,11 @@ const PostContent = ({title}) => {
     >
         <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
             <Typography variant="h4" gutterBottom>
-            {title}
-        </Typography>
+              {title}
+            </Typography>
         <Divider />
         <Typography variant="h7" gutterBottom>
-            {temp}
+            {description}
         </Typography>
         </Paper>
         
