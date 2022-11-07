@@ -13,7 +13,7 @@ async function getAllChallenges() {
 }
 
 async function getChallengeById(id) {
-    return await Challenge.find({_id: id})
+    return await Challenge.findOne({_id: id})
 }
 
 // further customise as per the needs.

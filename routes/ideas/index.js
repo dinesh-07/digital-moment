@@ -18,10 +18,15 @@ router.post('', async (req, res, next) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
     const ideaId = req.params.id
-    const idea = await getIdeaById(ideaId);
-    res.send(idea);
+
+    try {
+        const idea = await getIdeaById(ideaId);
+        res.send(idea);
+    } catch(error) {
+        next(new Error(`Could not find idea with id ${ideaId}`));
+    }
 })
 
 router.get('', async (_request, res) => {
