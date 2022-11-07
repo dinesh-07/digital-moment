@@ -1,31 +1,33 @@
-import React, {useState, useEffect} from 'react'
-import { Form, Row, Col, Button} from 'react-bootstrap';
-import { Multiselect } from 'multiselect-react-dropdown'
+import React, {useState, useEffect, useRef} from 'react'
+import { Form, Row, Col } from 'react-bootstrap';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 
-const PostForm = () => {
-  const tags = [      {title: "No Poverty", id: 1}, 
-                      {title: 'Zero Hunger', id: 2},
-                      {title: 'Good Health and Well-Being', id: 3},
-                      {title: 'Quality Education', id: 4},
-                      {title: 'Gender Equality', id: 5},
-                      {title: 'Clean Water and Sanitation', id: 6},
-                      {title: 'Affordable and Clean Energy', id: 7},
-                      {title: 'Decent Work and Economic Growth', id: 8},
-                      {title: 'Industry, Innovation, and Infrastructure', id: 9},
-                      {title: 'Reduced Inequalities', id: 10},
-                      {title: 'Sustainable Cities and Communities', id: 11},
-                      {title: 'Responsible Consumption and Production', id: 12},
-                      {title: 'Climate Action', id: 13},
-                      {title: 'Life Below Water', id: 14},
-                      {title: 'Life On Land', id: 15},
-                      {title: 'Peace, Justice, and Strong Institutions', id: 16},
-                      {title: 'Partnerships for the Goals', id: 17}
+const PostForm = ({isChallenge}) => {
+  const animatedComponents = makeAnimated();
+  const tags = [      {value: "No Poverty", label: "No Poverty"}, 
+                      {value: 'Zero Hunger', label: 'Zero Hunger'},
+                      {value: 'Good Health and Well-Being', label: 'Good Health and Well-Being'},
+                      {value: 'Quality Education', label: 'Quality Education'},
+                      {value: 'Gender Equality', label: 'Gender Equality'},
+                      {value: 'Clean Water and Sanitation', label: 'Clean Water and Sanitation'},
+                      {value: 'Affordable and Clean Energy', label: 'Affordable and Clean Energy'},
+                      {value: 'Decent Work and Economic Growth', label: 'Decent Work and Economic Growth'},
+                      {value: 'Industry, Innovation, and Infrastructure', label: 'Industry, Innovation, and Infrastructure'},
+                      {value: 'Reduced Inequalities', label: 'Reduced Inequalities'},
+                      {value: 'Sustainable Cities and Communities', label: 'Sustainable Cities and Communities'},
+                      {value: 'Responsible Consumption and Production', label: 'Responsible Consumption and Production'},
+                      {value: 'Climate Action', label: 'Climate Action'},
+                      {value: 'Life Below Water', label: 'Life Below Water'},
+                      {value: 'Life On Land', label: 'Life On Land'},
+                      {value: 'Peace, Justice, and Strong Institutions', label: 'Peace, Justice, and Strong Institutions'},
+                      {value: 'Partnerships for the Goals', label: 'Partnerships for the Goals'}
             ]
   
   const [selectedTags, setSelectedTags] = useState([]);
-  
   const onSelect = (selectedTags, selectedItem) => {
-      // console.log("Selected tags:", selectedTags)
+     setSelectedTags([...selectedTags, selectedItem])
+     console.log(selectedTags)
   }
 
   const onRemove = (selectedTags, selectedItem) => {
@@ -38,13 +40,13 @@ const PostForm = () => {
 
         <Form.Group as = {Row} className = "mb-4">
             <Form.Label column sm = {2}>Tags</Form.Label>
+            
             <Col sm={9} >
-              <Multiselect
-                options={tags} // Options to display in the dropdown
-                selectedValues={selectedTags} // Preselected value to persist in dropdown
-                onSelect={onSelect} // Function will trigger on select event
-                onRemove={onRemove} // Function will trigger on remove event
-                displayValue="title" // Property name to display in the dropdown options
+              <Select
+                  closeMenuOnSelect={false}
+                  components={animatedComponents}
+                  isMulti
+                  options={tags}
               />
             </Col>
         </Form.Group>
@@ -59,7 +61,7 @@ const PostForm = () => {
         <Form.Group as = {Row} className = "mb-4">
                 <Form.Label column sm = {2}>Description</Form.Label>
                 <Col lg={9}>
-                  <Form.Control as = "textarea" placeholder = "Describe your challenge" style={{ minHeight: 270 }}/>
+                  <Form.Control as = "textarea" placeholder={`Describe your ${isChallenge ? "challenge" : "idea"}`} style={{ minHeight: 270 }}/>
                 </Col>
         </Form.Group>
 
